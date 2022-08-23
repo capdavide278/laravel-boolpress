@@ -1,8 +1,8 @@
 @extends('admin.layouts.base')
 
 @section('mainContent')
-    @dump($errors->all())
-    @dump(Auth::user()->name)
+{{--     @dump($errors->all())
+    @dump(Auth::user()->name) --}}
     {{-- @dd($errors->get('tags.*')) --}}
 
     <h1>Create new post</h1>
