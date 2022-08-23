@@ -61,6 +61,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         // validation
+        dd($request->all());
         $this->validation_rules['slug'][] = 'unique:posts';
         $request->validate($this->validation_rules);
 
