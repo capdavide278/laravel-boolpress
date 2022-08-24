@@ -1,11 +1,27 @@
 <template>
   <div>
     <h1>Contact us</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate, libero aperiam obcaecati cumque sequi aut maiores expedita <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis incidunt ullam accusantium inventore fuga. Minima accusamus exercitationem deserunt veniam sit nemo fuga dolorum animi aliquam, soluta, accusantium nulla, voluptas reprehenderit?
-    Maxime sed officia a fugit? Culpa voluptatum distinctio quas saepe, accusantium minus, hic rem consequatur illum optio autem omnis quod itaque at, natus pariatur aliquid alias obcaecati? Est, magnam fuga?
-    Excepturi eum quaerat totam praesentium alias, reiciendis voluptate fugit enim in minus aperiam velit amet ab nam dicta delectus quis unde ex quia eveniet consectetur recusandae illum. Odit, aliquid quisquam.
-    Aperiam voluptatibus officiis optio. Dolore eveniet qui tenetur sint. Nesciunt repellendus alias ab iure saepe nobis, a dolor at. Perferendis optio numquam est tenetur. Accusamus, sunt nisi? Ex, non iusto?
-    Facilis asperiores saepe labore, sunt tempora nemo temporibus nostrum tempore libero molestiae, non impedit aliquam eum recusandae ex? Dolor debitis enim molestiae officiis hic quod ipsa fuga corporis non in.</p>
+    <form>
+      <div class="mb-3">
+          <label class="form-label" for="name">Name</label>
+          <input class="form-control" type="text" name="name" id="name">
+      </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="email">email</label>
+          <input class="form-control" type="email" name="email" id="email">
+        </div>
+
+      <div class="mb-3">
+          <label class="form-label" for="Message">Message</label>
+          <textarea class="form-control" name="Message" id="Message" cols="30" rows="10"></textarea>
+      </div>
+      <div>
+        <input class="form-check-input" type="checkbox" name="newsletter" id="newsletter" checked>
+        <label for="newsletter" class="form-check-label">Iscrivimi alla newsletter</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Send</button>
+    </form>
   </div>
 </template>
 
