@@ -1,11 +1,12 @@
 @extends('admin.layouts.base')
 
 @section('mainContent')
-{{--     @dump($errors->all())
+    {{-- @dump($errors->all())
     @dump(Auth::user()->name) --}}
     {{-- @dd($errors->get('tags.*')) --}}
 
     <h1>Create new post</h1>
+    {{-- <form action="{{ route('admin.posts.store') }}" method="post" novalidate> --}}
     <form action="{{ route('admin.posts.store') }}" method="post" novalidate enctype="multipart/form-data">
         @csrf
 
@@ -30,9 +31,9 @@
             @enderror
         </div>
 
-{{--         <div class="mb-3">
+        {{-- <div class="mb-3">
             <label class="form-label" for="image">Image</label>
-            <input class="form-control @error('image') is-invalid @enderror" type="file" name="image" id="image" enctype="multipart/from-data" value="{{ old('image') }}">
+            <input class="form-control @error('image') is-invalid @enderror" type="url" name="image" id="image" value="{{ old('image') }}">
             @error('image')
                 <div class="invalid-feedback">
                     {{ $message }}
@@ -42,13 +43,15 @@
 
         <div class="mb-3">
             <label class="form-label" for="image">Image</label>
-            <input class="form-control @error('image') is-invalid @enderror" type="file" name="image" id="image" accept="image/*" enctype="multipart/from-data" value="{{ old('image') }}">
+            <input class="form-control @error('image') is-invalid @enderror" type="file" name="image" id="image" accept="image/*">
             @error('image')
                 <div class="invalid-feedback">
                     {{ $message }}
                 </div>
             @enderror
-        </div> 
+
+            <img id="preview" class="img-fluid" src="">
+        </div>
 
         <div class="mb-3">
             <label class="form-label" for="category_id">Category</label>
